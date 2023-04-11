@@ -1,0 +1,40 @@
+.file-upload-form__input {
+    display: none; /* hide the default file input */
+  }
+  
+  .file-upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .file-upload-form__label {
+    display: inline-block;
+    background-color: #1E90FF;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  
+  .file-upload-form__label:hover {
+    background-color: #0066CC;
+  }
+  
+  .file-upload-form__label::before {
+    content: 'Choose File';
+  }
+  
+  .file-upload-form__input:focus + .file-upload-form__label {
+    box-shadow: 0 0 0 2px #1E90FF;
+  }
+  
+  .file-upload-form__input-file-name {
+    display: inline-block;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #666;
+    margin-top: 1rem;
+  }
