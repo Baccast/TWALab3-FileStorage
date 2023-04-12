@@ -2,7 +2,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import FileUploadForm from './pages/FileUploadPage.jsx';
 import HomePage from './pages/HomePage.jsx'
-import RetreiveFile from './pages/RetreiveFile.jsx'
+import RetrieveFile from './pages/RetrieveFile.jsx'
+import DeleteFile from './pages/DeleteFilePage.jsx';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App = () => {
@@ -16,7 +17,8 @@ const App = () => {
         <Routes>
           <Route exact path="/" element={<HomePage />}/>
           <Route path="/upload" element={<FileUploadForm />}/>
-          <Route path="/retreive" element={<RetreiveFile />}/>
+          <Route path="/retrieve" element={<RetrieveFile />}/>
+          <Route path="/delete" element={<DeleteFile />}/>
         </Routes>
     </Router>
     </div>

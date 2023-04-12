@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState } from "react";
+import axios from "axios";
 
 const RetrieveFile = () => {
-  const [fileId, setFileId] = useState('');
-  const [fileType, setFileType] = useState('');
-  const [fileUrl, setFileUrl] = useState('');
-  const [status, setStatus] = useState('');
-  const [fileName, setFileName] = useState('');
+  const [fileId, setFileId] = useState("");
+  const [fileType, setFileType] = useState("");
+  const [fileUrl, setFileUrl] = useState("");
+  const [status, setStatus] = useState("");
+  const [fileName, setFileName] = useState("");
 
   const handleFileIdChange = (event) => {
     setFileId(event.target.value);
@@ -18,16 +18,19 @@ const RetrieveFile = () => {
 
   const handleFileNameChange = (event) => {
     setFileName(event.target.value);
-    };
+  };
 
   const handleRetrieveFile = async () => {
     try {
-      const response = await axios.get(`http://localhost:8080/retrieve/${fileId}-${fileName}.${fileType}`, { responseType: 'blob' });
+      const response = await axios.get(
+        `http://localhost:8080/retrieve/${fileId}-${fileName}.${fileType}`,
+        { responseType: "blob" }
+      );
       const fileUrl = URL.createObjectURL(response.data);
       setFileUrl(fileUrl);
       setStatus(response.status);
     } catch (error) {
-      console.error('There was a problem with the fetch operation:', error);
+      console.error("There was a problem with the fetch operation:", error);
       setStatus(error.response.status);
     }
   };
@@ -85,10 +88,15 @@ const RetrieveFile = () => {
       </button>
       {status && <div>Status: {status}</div>}
       {fileUrl && (
-        <iframe src={fileUrl} title="file-preview" width = "100%" height = "100%"></iframe>
-        )}
+        <iframe
+          src={fileUrl}
+          title="file-preview"
+          width="100%"
+          height="100%"
+        ></iframe>
+      )}
     </>
-    );
+  );
 };
 
 export default RetrieveFile;
