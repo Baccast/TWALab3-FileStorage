@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage.jsx'
 import RetrieveFile from './pages/RetrieveFile.jsx'
 import DeleteFile from './pages/DeleteFilePage.jsx';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Monitor from './pages/Monitor.jsx';
 
 const App = () => {
   return (
@@ -30,6 +31,9 @@ const App = () => {
             <li className="nav-item">
               <a className="nav-link" href="/delete">Delete</a>
             </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/monitor">Monitor</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -42,6 +46,7 @@ const App = () => {
           <Route path="/upload" element={<FileUploadForm />}/>
           <Route path="/retrieve" element={<RetrieveFile />}/>
           <Route path="/delete" element={<DeleteFile />}/>
+          <Route path="/monitor" element={<Monitor />}/>
         </Routes>
     </Router>
     </div>
