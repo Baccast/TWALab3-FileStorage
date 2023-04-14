@@ -53,7 +53,7 @@ const DeleteFile = () => {
 
   return (
     <>
-      <div className="bg-light" style={{ height: "90vh" }}>
+      <div className="bg-light" style={{ height: "94vh" }}>
         <h1 className="text-center mb-4">Delete File</h1>
         <div className="container text-center">
           <div className="form-group">
@@ -136,8 +136,6 @@ const DeleteFile = () => {
                   <option value="ppt">.ppt</option>
                   <option value="pptx">.pptx</option>
                   <option value="csv">.csv</option>
-                  <option value="zip">.zip</option>
-                  <option value="7z">.7z</option>
                   <option value="mp3">.mp3</option>
                   <option value="mp4">.mp4</option>
                 </select>

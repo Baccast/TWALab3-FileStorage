@@ -36,14 +36,14 @@ const FileUploadPage = () => {
   };
 
   return (
-    <div className="file-upload-page bg-light" style={{ height: "90vh" }}>
+    <div className="file-upload-page bg-light" style={{ height: "94vh" }}>
       <h1 className="file-upload-page__title text-center">File Upload Page</h1>
       <form className="file-upload-form">
         <label htmlFor="file-input" className="file-upload-form__label"></label>
         <input
           id="file-input"
           type="file"
-          accept=".jpg,.jpeg,.png,.pdf,.txt,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.csv,.zip,.rar,.7z,.mp3,.mp4"
+          accept=".jpg,.jpeg,.png,.pdf,.txt,.doc,.docx,.xls,.xlsx,.ppt,.pptx,.csv,.mp3,.mp4"
           onChange={handleFileChange}
           className="file-upload-form__input"
         />

@@ -78,8 +78,6 @@ const RetrieveFile = () => {
             <option value="ppt">.ppt</option>
             <option value="pptx">.pptx</option>
             <option value="csv">.csv</option>
-            <option value="zip">.zip</option>
-            <option value="7z">.7z</option>
             <option value="mp3">.mp3</option>
             <option value="mp4">.mp4</option>
           </select>
